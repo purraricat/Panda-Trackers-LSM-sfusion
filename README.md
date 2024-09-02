@@ -6,24 +6,24 @@ Requires [SlimeVR Server](https://github.com/SlimeVR/SlimeVR-Server) to work wit
 
 ## Configuration
 
+Make sure you are using sfusion branch for all LSM type trackers instead main.
+
 Firmware configuration is located in the `defines.h` file. For more information on how to configure your firmware, refer to the [Configuring the firmware project section of SlimeVR documentation](https://docs.slimevr.dev/firmware/configuring-project.html).
 
 ## Compatibility
 
 The following IMUs and their corresponding `IMU` values are supported by the firmware:
 
-* BMI270 (IMU_BMI270), ICM-42688 (IMU_ICM42688), LSM6DS3TR-C (IMU_LSM6DS3TRC), LSM6DSV (IMU_LSM6DSV), LSM6DSO (IMU_LSM6DSO), LSM6DSR (IMU_LSM6DSR), MPU-6050 (IMU_MPU6050_SF)
+* BMI270 (IMU_BMI270), LSM6DSV (IMU_LSM6DSV), LSM6DSO (IMU_LSM6DSO), LSM6DSR (IMU_LSM6DSR)
   * Using common code: SoftFusionSensor for sensor fusion of Gyroscope and Accelerometer.
   * Gyro&Accel sample rate, gyroscope offset and 6-side accelerometer calibration supported.
   * In case of BMI270, gyroscope sensitivity auto-calibration (CRT) is additionally performed.
-  * Support for magnetometers is currently not implemented.
-  * VERY experimental support!
 
 Firmware can work with both ESP8266 and ESP32. Please edit `defines.h` and set your pinout properly according to how you connected the IMU.
 
 ## Sensor calibration
 
-For LSM6DSV six sides calibration and best practises see [Panda Trackers Readme](https://github.com/purraricat/SlimeVR-CheeseCake-PandaTrackers?tab=readme-ov-file)
+For LSM6DSV six sides calibration and best practices see [Panda Trackers Readme](https://github.com/purraricat/SlimeVR-CheeseCake-PandaTrackers?tab=readme-ov-file)
 
 ## Contributions
 Any contributions submitted for inclusion in this repository will be dual-licensed under
